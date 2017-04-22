@@ -45,32 +45,37 @@ class App extends Component {
     }
     render() {
         let cardStyle = {
-            margin: '0 auto'
+            display: 'inline-block',
+            marginLeft: 'auto',
+            marginRight: 'auto'
         }
         let form = (
-            <Col md={4}>
-            <Card
-              className={cardStyle}
-              number={this.state.number}
-              expiry={this.state.expiry}
-              cvc={this.state.cvc}
-              name={this.state.name}
-              focused={this.state.focused}/>
+            <div>
+
+            <div style={cardStyle}>
+              <Card
+                className="test"
+                number={this.state.number}
+                expiry={this.state.expiry}
+                cvc={this.state.cvc}
+                name={this.state.name}
+                focused={this.state.focused}/>
+            </div>
             <CardForm
               onChange={this.handleChange}
               onSubmit={this.handleSubmit}/>
-          </Col>
+          </div>
         )
         let thanks = (
-            <Col md={4}>
+            <div>
             <h2>Thanks for using our service!</h2>
-          </Col>
+          </div>
         )
         let wrong = (
-            <Col md={4}>
+            <div>
             <h2>Opps, something went wrong!</h2>
             <Button onClick={this.goBack}>Try again</Button>
-          </Col>
+          </div>
         )
         let content;
         if (this.state.status === 'new') {
@@ -84,8 +89,15 @@ class App extends Component {
         return (
             <div className="App">
               <Row>
-                {content}
+                <Col sm={2} md={4} lg={4}></Col>
+                <Col sm={8} md={4} lg={4}>
+                  <Row>
+                    {content}
+                  </Row>
+                </Col>
+                <Col sm={2} md={4} lg={4}></Col>
               </Row>
+
             </div>
         );
     }
