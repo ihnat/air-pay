@@ -1,0 +1,23 @@
+{
+  "name": "airPay",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.9.5"
+  },
+  "dependencies": {
+    "axios": "^0.16.1",
+    "bootstrap": "^3.3.7",
+    "card-react": "^1.2.6",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.30.10",
+    "react-credit-card": "^0.20.0",
+    "react-dom": "^15.5.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
